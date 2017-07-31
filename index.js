@@ -20,30 +20,30 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-import {debugOrdering} from './src/debug'
+import ciena_graphlib from 'ciena-graphlib';
+import {debugOrdering} from './src/debug';
+import {
+    addBorderNode,
+    addDummyNode,
+    asNonCompoundGraph,
+    buildLayerMatrix,
+    intersectRect,
+    maxRank,
+    normalizeRanks,
+    notime,
+    partition,
+    predecessorWeights,
+    removeEmptyRanks,
+    simplify,
+    successorWeights,
+    time
+} from './src/util';
 
 export var debug = {
   debugOrdering
-}
+};
 
-export {default as layout} from './src/layout'
-
-import {
-  addBorderNode,
-  addDummyNode,
-  asNonCompoundGraph,
-  buildLayerMatrix,
-  intersectRect,
-  maxRank,
-  normalizeRanks,
-  notime,
-  partition,
-  predecessorWeights,
-  removeEmptyRanks,
-  simplify,
-  successorWeights,
-  time
-} from './src/util'
+export {default as layout} from './src/layout';
 
 export var util = {
   addBorderNode,
@@ -60,4 +60,6 @@ export var util = {
   simplify,
   successorWeights,
   time
-}
+};
+
+export var graphlib = ciena_graphlib;
